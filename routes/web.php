@@ -20,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', Index::class)->name('index');
-Route::get('/saves', Saves::class)->name('saves');
+// Route::get('/', Index::class)->name('index');
+Route::get('/', Saves::class)->name('saves');
 
 Auth::routes();
 
