@@ -9,7 +9,7 @@
                     @foreach ($fichiers as $fichier)
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             {{ basename($fichier) }}
-                            <a href="" download="" class="btn btn-success">
+                            <a href="{{ $fichier }}" download="" class="btn btn-success">
                                 Télécharger
                             </a>
                         </li>
