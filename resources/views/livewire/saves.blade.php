@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-8">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header text-light bg-success">
                 <div class="card-title">Fichiers de sauvegarde</div>
             </div>
             <div class="card-body">
@@ -9,7 +9,7 @@
                     @foreach ($fichiers as $fichier)
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             {{ basename($fichier) }}
-                            <a href="" download="" class="badge bg-primary rounded-pill">
+                            <a href="" download="" class="btn btn-success">
                                 Télécharger
                             </a>
                         </li>
