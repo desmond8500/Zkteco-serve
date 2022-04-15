@@ -1,21 +1,36 @@
 <div class="row">
-    <div class="col-md-8">
-        <div class="card">
-            <div class="card-header text-light bg-success">
-                <div class="card-title">Fichiers de sauvegarde</div>
+    <div class="row">
+        @foreach ($fichiers as $fichier)
+            <div class="col-md-4 ">
+                <div class="border border-secondary rounded p-3 mb-3 ">
+                    <a href="{{ asset($fichier) }}" download class=" ">
+                        <img src="{{ asset('img/001-sql.png') }}" class="logo" alt="..." >
+                        <span class="card-text title">{{ basename($fichier) }}</span>
+                    </a>
+
+                </div>
             </div>
-            <div class="card-body">
-                <ul class="list-group">
-                    @foreach ($fichiers as $fichier)
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            {{ basename($fichier) }}
-                            <a href="{{ asset($fichier) }}" download class="btn btn-success">
-                                Télécharger
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
-        </div>
+
+        @endforeach
     </div>
+
+    <style>
+        .logo{
+            /* display: block;
+            margin: auto; */
+            width: 30px;
+        }
+        .file{
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 3px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
 </div>
+
